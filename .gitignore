@@ -1,0 +1,14 @@
+# Godot 3 & 4 - project specific generated files
+.import/
+.export/
+export.cfg
+export_presets.cfg
+.godot/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
