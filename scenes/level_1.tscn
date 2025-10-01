@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://c0vgqtbj0gdne"]
+[gd_scene load_steps=16 format=4 uid="uid://c0vgqtbj0gdne"]
 
 [ext_resource type="Texture2D" uid="uid://besioh1vejbb6" path="res://assets/MossyCavern/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_4nkto"]
 [ext_resource type="Texture2D" uid="uid://dtkokgrb8hqvp" path="res://assets/MossyCavern/Mossy Tileset/Mossy - TileSet.png" id="1_014kd"]
 [ext_resource type="Texture2D" uid="uid://bb755s8b6p86r" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Hanging Plants.png" id="2_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://d14kblxpu8eo8" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://djc86vjq18ha5" path="res://scenes/player.tscn" id="5_15mv3"]
+[ext_resource type="PackedScene" uid="uid://cuaxv2ijblm04" path="res://scenes/coin.tscn" id="6_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3sih"]
 texture = ExtResource("1_4nkto")
@@ -396,8 +397,77 @@ tile_map_data = PackedByteArray("AAD7/wAAAAADAAYAAAAAAAAAAAADAAYAAAAEAAAAAAADAAY
 tile_set = SubResource("TileSet_2aecg")
 
 [node name="Ground" type="TileMapLayer" parent="Tilemaps"]
+z_index = 11
 tile_map_data = PackedByteArray("AAD4/wEAAAAAAAAAAAD5/wEAAAABAAAAAAD6/wEAAAABAAAAAAD7/wEAAAABAAAAAAD8/wEAAAABAAAAAAD9/wEAAAABAAAAAAD+/wEAAAABAAAAAAD//wEAAAABAAAAAAAAAAEAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAACAAAAAAAEAAIAAAACAAEAAAD4/wIAAAAAAAEAAAD5/wIAAAABAAEAAAD6/wIAAAABAAEAAAD8/wIAAAABAAEAAAD7/wIAAAABAAEAAAD+/wIAAAABAAEAAAD9/wIAAAABAAEAAAD//wIAAAABAAEAAAAAAAIAAAABAAEAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAADAAIAAAABAAEAAAD4/wMAAAAAAAIAAAAEAAMAAAACAAIAAAADAAMAAAABAAIAAAACAAMAAAABAAIAAAABAAMAAAABAAIAAAAAAAMAAAABAAIAAAD//wMAAAABAAIAAAD+/wMAAAABAAIAAAD9/wMAAAABAAIAAAD8/wMAAAABAAIAAAD7/wMAAAABAAIAAAD6/wMAAAABAAIAAAD5/wMAAAABAAIAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAIAAAAIAAEAAAABAAAAAAAJAAEAAAACAAAAAAAJAAIAAAACAAEAAAAJAAMAAAACAAIAAAAIAAMAAAABAAIAAAAIAAIAAAABAAEAAAAMAAEAAAAAAAAAAAARAAEAAAAAAAAAAAAOAAEAAAACAAAAAAAOAAMAAAACAAIAAAAMAAMAAAAAAAIAAAAMAAIAAAAAAAEAAAAOAAIAAAACAAEAAAANAAMAAAABAAIAAAANAAIAAAABAAEAAAANAAEAAAABAAAAAAARAAIAAAAAAAEAAAARAAMAAAAAAAIAAAASAAMAAAABAAIAAAATAAMAAAACAAIAAAATAAIAAAACAAEAAAATAAEAAAACAAAAAAASAAEAAAABAAAAAAASAAIAAAABAAEAAAAWAAEAAAAAAAAAAAAXAAEAAAABAAAAAAAYAAEAAAABAAAAAAAZAAEAAAABAAAAAAAaAAEAAAABAAAAAAAbAAEAAAABAAAAAAAcAAEAAAABAAAAAAAdAAEAAAABAAAAAAAWAAIAAAAAAAEAAAAWAAMAAAAAAAIAAAAXAAMAAAABAAIAAAAYAAMAAAABAAIAAAAZAAMAAAABAAIAAAAaAAMAAAABAAIAAAAbAAMAAAABAAIAAAAcAAMAAAABAAIAAAAdAAMAAAABAAIAAAAeAAMAAAACAAIAAAAeAAIAAAACAAEAAAAXAAIAAAABAAEAAAAYAAIAAAABAAEAAAAZAAIAAAABAAEAAAAaAAIAAAABAAEAAAAbAAIAAAABAAEAAAAcAAIAAAABAAEAAAAdAAIAAAABAAEAAAAeAAEAAAACAAAAAAD4//7/AQABAAAAAQD4////AQAAAAAAAQD5//7/AQABAAEAAQD5////AQAAAAEAAQD6//7/AQABAAIAAQD6////AQAAAAIAAQD7//7/AQABAAMAAQD7////AQAAAAMAAQD8//7/AQABAAQAAQD8////AQAAAAQAAQD9//7/AQABAAUAAQD9////AQAAAAUAAQD+//7/AQABAAYAAgD+////AQAAAAYAAQD///7/AQABAAEAAQD/////AQAAAAEAAQAAAP7/AQABAAIAAQAAAP//AQAAAAIAAQABAP7/AQABAAMAAQABAP//AQAAAAMAAQACAP7/AQABAAQAAQACAP//AQAAAAQAAQADAP7/AQABAAUAAQADAP//AQAAAAQAAQAEAP7/AQABAAYAAgAEAP//AQAAAAEAAQAFAP7/AQABAAEAAQAFAP//AQAAAAIAAQAGAP7/AQABAAIAAQAGAP//AQAAAAMAAQAHAP7/AQABAAMAAQAHAP//AQAAAAQAAQAIAP7/AQABAAQAAQAIAP//AQAAAAEAAQAJAP7/AQABAAUAAQAJAP//AQAAAAIAAQAKAP7/AQABAAYAAgAKAP//AQAAAAMAAQALAP7/AQABAAEAAQALAP//AQAAAAQAAQAMAP7/AQABAAIAAQAMAP//AQAAAAEAAQANAP7/AQABAAMAAQANAP//AQAAAAIAAQAOAP7/AQABAAQAAQAOAP//AQAAAAMAAQAPAP7/AQABAAUAAQAPAP//AQAAAAQAAQAQAP7/AQABAAYAAgAQAP//AQAAAAEAAQARAP7/AQABAAEAAQARAP//AQAAAAIAAQASAP7/AQABAAIAAQASAP//AQAAAAMAAQATAP7/AQABAAMAAQATAP//AQAAAAQAAQAUAP7/AQABAAQAAQAUAP//AQAAAAEAAQAVAP7/AQABAAUAAQAVAP//AQAAAAIAAQAWAP7/AQABAAYAAgAWAP//AQAAAAMAAQAXAP7/AQABAAEAAQAXAP//AQAAAAEAAQAYAP7/AQABAAIAAQAYAP//AQAAAAIAAQAZAP7/AQABAAMAAQAZAP//AQAAAAMAAQAaAP7/AQABAAQAAQAaAP//AQAAAAEAAQAbAP7/AQABAAUAAQAbAP//AQAAAAIAAQAcAP7/AQABAAYAAgAcAP//AQAAAAEAAQAdAP7/AQABAAEAAQAdAP//AQAAAAIAAQAeAP7/AQABAAcAAgAeAP//AQAAAAcAAQA=")
 tile_set = SubResource("TileSet_rus8k")
 
 [node name="Player" parent="." instance=ExtResource("5_15mv3")]
 position = Vector2(-1886, 436)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-1599, 466)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-1509, 466)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-1421, 466)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-501, 466)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-411, 466)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-323, 466)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-1599, 466)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-501, 466)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-411, 466)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(-323, 466)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(1197, 466)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(1287, 466)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(1375, 466)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(3432, 303)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(3522, 303)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(3610, 303)
+
+[node name="Coin17" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(6780, 466)
+
+[node name="Coin18" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(6870, 466)
+
+[node name="Coin19" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(6958, 466)
+
+[node name="Coin20" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(8318, 167)
+
+[node name="Coin21" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(8408, 167)
+
+[node name="Coin22" parent="Coins" instance=ExtResource("6_fcfvj")]
+position = Vector2(8496, 167)
